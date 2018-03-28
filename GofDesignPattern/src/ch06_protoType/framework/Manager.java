@@ -1,4 +1,4 @@
-package ch05_protoType.framework;
+package ch06_protoType.framework;
 
 import java.util.HashMap;
 

@@ -1,6 +1,6 @@
-package ch05_protoType.anonymous;
+package ch06_protoType.anonymous;
 
-import ch05_protoType.framework.Product;
+import ch06_protoType.framework.Product;
 
 public class UnderlinePen implements Product {
 	private char ulchar;

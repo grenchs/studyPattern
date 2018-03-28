@@ -1,11 +1,11 @@
-package ch05_protoType;
+package ch06_protoType;
 
 import java.util.HashMap;
 
-import ch05_protoType.anonymous.MessageBox;
-import ch05_protoType.anonymous.UnderlinePen;
-import ch05_protoType.framework.Manager;
-import ch05_protoType.framework.Product;
+import ch06_protoType.anonymous.MessageBox;
+import ch06_protoType.anonymous.UnderlinePen;
+import ch06_protoType.framework.Manager;
+import ch06_protoType.framework.Product;
 
 public class Main {
 	private static final String STRING_MESSAGE = "string message";
@@ -32,8 +32,9 @@ public class Main {
 //		Product p1 = manager.create(STRING_MESSAGE);
 		HashMap<String, Product> test = new HashMap<>();
 		test.put("qwer", upen);
-		Product testqwer = test.get("qwer");
+		Product testqwer = upen.CreateClone();
 		upen.setUlchar('_');
+		
 		testqwer.use(OUTPUT_MESSAGE);
 		
 		Product p2 = manager.create(WARNING_BOX);
