@@ -14,7 +14,7 @@ public class Main {
 		try {
 			sc = new Scanner(System.in);
 			String check = sc.nextLine();
-			if (check.length() != 1) {
+			if (check.length() == -1) {
 				System.out.println("Usage: java Main class.name.of.ConcreteFctory");
 				System.out.println("Exmaple 1: java Main listfactory.ListFactory");
 				System.out.println("Exmaple 2: java Main tablefactory.TableFactory");

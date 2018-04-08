@@ -5,23 +5,20 @@ import ch08_abstractFactory.factory.Link;
 import ch08_abstractFactory.factory.Page;
 import ch08_abstractFactory.factory.Tray;
 
-public class ListFacotry extends Factory{
+public class ListFactory extends Factory {
 
 	@Override
 	public Link createLink(String caption, String url) {
-		return null;
+		return new ListLink(caption, url);
 	}
 
 	@Override
 	public Tray createTray(String caption) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ListTray(caption);
 	}
 
 	@Override
 	public Page createPage(String caption, String author) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ListPage(caption, author);
 	}
-
 }
