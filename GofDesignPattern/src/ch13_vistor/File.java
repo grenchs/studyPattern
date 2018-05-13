@@ -1,5 +1,25 @@
 package ch13_vistor;
 
-public class File {
+public abstract class File implements Element {
+    private String name;
+    private int size;
+
+    public File(String name, int size) {
+        this.name = name;
+        this.size = size;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    @Override
+    public void accept(Vistor v) {
+        v.visit(this);
+    }
 
 }
