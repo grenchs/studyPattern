@@ -1,6 +1,6 @@
 package ch13_vistor;
 
-public abstract class File implements Element {
+public class File extends Entry {
     private String name;
     private int size;
 

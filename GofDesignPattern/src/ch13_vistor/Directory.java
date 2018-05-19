@@ -5,13 +5,11 @@ import java.util.Iterator;
 
 public class Directory extends Entry {
     private String name;
-    private ArrayList dir = new ArrayList<>();
+    private ArrayList<Entry> dir = new ArrayList<Entry>();
 
-    public Directory(String name) 
-    {
+    public Directory(String name) {
         this.name = name;
     }
-    
 
     @Override
     public void accept(Vistor v) {
@@ -25,21 +23,21 @@ public class Directory extends Entry {
 
     @Override
     public int getSize() {
-        int size = 9;
+        int size = 0;
         Iterator it = dir.iterator();
-        
+
         while (it.hasNext()) {
             Entry entry = (Entry) it.next();
             size += entry.getSize();
         }
         return size;
     }
-    
+
     public Entry add(Entry entry) {
         dir.add(entry);
         return this;
     }
-    
+
     public Iterator iterator() {
         return dir.iterator();
     }
